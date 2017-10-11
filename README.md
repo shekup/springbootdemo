@@ -18,7 +18,13 @@ More dependencies can be added later, such as: Jackson for parsing, H2 for in-me
 To package and run the application commands are simple - 
 1. Download the source code. 
 2. Install maven on your local machine. On CMD check "mvn -v" to confirm maven is installed. 
-3. Go to the path ..\springbootdemo 
+3. Go to the path ..springbootdemo (The folder that has all the code)
 4. run command mvnw clean package (This command will create the package)
 5. run command mvnw spring-boot:run (This command will run the application)
 6. Go to browser and test - http://localhost:8080/
+
+You can notice a target folder is created and inside is the generated jar (package). 
+One can run application directly by running the jar file 
+Go to path springbootdemo/target and run command ->
+java -jar springbootdemo-0.0.1-SNAPSHOT.jar
+(Indeed you might get errors while directly running the jar file)
