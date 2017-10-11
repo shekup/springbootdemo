@@ -2,6 +2,7 @@
 
 Spring Boot Demo application - Loads data from csv file and exposes as RESTful microservice
 The application is created using IntelliJ as IDE, Spring Boot as Microservice framework, and H2 as in memory database. 
+The quality of code is not good and is for demo purpose for egtting started with Spring boot (only) and doesn't covers dockers, etc. 
 
 One application startup:
 1. Application loads the data from csv file (included in project) into in memory database
