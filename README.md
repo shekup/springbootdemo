@@ -13,4 +13,12 @@ This is just a basic application to understand developing microservice with spri
 In IntelliJ, Spring boot application can be easily created using:
 File -> New Project -> Spring Initializr and using default options. 
 The created project has structure, Application class, pom.xml, etc. 
-More dependencies can be added later, such as: Jackson for parsing, H2 for in-memory database, data-jpa for managing entities, 
+More dependencies can be added later, such as: Jackson for parsing, H2 for in-memory database, data-jpa for managing entities.
+
+To package and run the application commands are simple - 
+1. Download the source code. 
+2. Install maven on your local machine. On CMD check "mvn -v" to confirm maven is installed. 
+3. Go to the path ..\springbootdemo 
+4. run command mvnw clean package (This command will create the package)
+5. run command mvnw spring-boot:run (This command will run the application)
+6. Go to browser and test - http://localhost:8080/
