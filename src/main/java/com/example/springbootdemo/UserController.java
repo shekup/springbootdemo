@@ -13,7 +13,11 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
+// If we don't put @RestController, then Spring Boot will a valid & meaningful return JSON response
+
+@RestController
 public class UserController {
     private static final Logger log = LoggerFactory.getLogger(UserController.class);
 
@@ -22,13 +26,12 @@ public class UserController {
 
     @RequestMapping("/")
     public String index() {
-        /**
-         * Not working since env issue with Spring HATEOAS.
-         * Will be fixed in next release
-         for(User user: users){
-         user.add(linkTo(UserController.class).slash(user.getUserId()).withSelfRel());
-         }
-         */
+//        List<User> users = new ArrayList<>();
+//        repository.findAll().iterator().forEachRemaining(users::add);
+//        for(User user: users){
+//         user.add(linkTo(UserController.class).slash(user.getUserId()).withSelfRel());
+//         }
+        System.out.println("Hello Users");
         return "Hello Users";
     }
 
