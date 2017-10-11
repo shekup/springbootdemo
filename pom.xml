@@ -73,11 +73,11 @@
 			<artifactId>h2</artifactId>
 		</dependency>
 
-		<!-- Rabbit MQ -->
+		<!-- Rabbit MQ
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
+		</dependency>  -->
 
 	</dependencies>
 

@@ -28,6 +28,15 @@ public class SpringbootdemoApplication {
 		SpringApplication.run(SpringbootdemoApplication.class, args);
 	}
 
+    /**
+     * On application start-up
+     * a csv file is read.  CSV file has data - users
+     * User objects are instantiated with data from CSV file (except user id - which is generated)
+     * User objects are stored in repository that is they become Managed Entities
+     * When objects are stored in repository, the ID is generated for the object.
+     * @param repository
+     * @return
+     */
 	@Bean
 	public CommandLineRunner commandLineRunner(UserRepository repository) {
 		return args -> {
@@ -40,6 +49,15 @@ public class SpringbootdemoApplication {
 		};
 	}
 
+    /**
+     * The method reads a csv file and instantiates the entities - User's.
+     * Code uses Jackson - a simple parser
+     * Jackson API - CSVMapper and others have built in method
+     * for reading data from excel/csv and converting csv rows into Java objects.
+     * The method of Jackson has some limitation
+     * One limitation is the column header in CSV file should match the variable name in Java object
+     *     *
+     */
     public <T> List<T> loadObjectList(Class<T> type, String fileName) {
         try {
             CsvSchema bootstrapSchema = CsvSchema.emptySchema().withHeader();
